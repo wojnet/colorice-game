@@ -27,7 +27,7 @@ const ColorTile = ({ hex, index, selectedColorIndex }) => {
     }, []);
 
     return (
-        <div className="ColorTile" style={{ background: hex, borderStyle: selectedColorIndex == index ? "groove" : "none" }}>
+        <div className="ColorTile" style={{ background: hex, transform: selectedColorIndex == index ? "scale(1.2) rotate(2deg)" : "none", outline: selectedColorIndex == index ? `1px solid ${hex}` : "none" }}>
             <p style={{ color: textColor, textShadow: `0 0 10px ${shadowColor}55`}}>
                 { index !== undefined ? index + 1 : "N/A" }
             </p>
